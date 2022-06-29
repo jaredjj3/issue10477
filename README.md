@@ -12,7 +12,9 @@ docker-compose build && docker-compose run --rm test bash ; docker-compose down
 
 2. Wait until you can visit http://localhost:4444.
 
-3. Run `run` in the shell.
+3. Run `run` in the shell, which runs test/main.py.
+
+4. Press Ctrl+D to quit.
 
 ## Caveats
 
