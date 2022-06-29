@@ -12,3 +12,9 @@ services:
     image: selenium/standalone-chrome:99.0
     ports:
       - 4444:4444
+
+  test:
+    image: test:latest
+    build: test
+    volumes:
+      - ./test:/test
