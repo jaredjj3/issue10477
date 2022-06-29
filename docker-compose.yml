@@ -7,3 +7,8 @@ services:
       - 8000:80
     volumes:
       - ./html:/usr/share/nginx/html
+
+  selenium:
+    image: selenium/standalone-chrome:99.0
+    ports:
+      - 4444:4444
