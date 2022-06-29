@@ -8,16 +8,20 @@ services:
     volumes:
       - ./html:/usr/share/nginx/html
 
-  selenium:
+  chrome:
     image: selenium/standalone-chrome:99.0
+    hostname: chrome
     ports:
       - 4444:4444
+      - 5900:5900
+    privileged: true
+    shm_size: '2gb'
 
   test:
     image: test:latest
     build: test
     depends_on:
       - app
-      - selenium
+      - chrome
     volumes:
       - ./test:/test
