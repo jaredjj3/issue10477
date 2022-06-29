@@ -16,5 +16,8 @@ services:
   test:
     image: test:latest
     build: test
+    depends_on:
+      - app
+      - selenium
     volumes:
       - ./test:/test
